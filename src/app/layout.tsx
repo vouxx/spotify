@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/layout/SideBar";
 import Header from "@/layout/Header";
+import Player from "@/layout/Player";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
+        <div className='wrap'>
           <SideBar />
-          <div>
+          <div className='section'>
             <Header />
             {children}
           </div>
+          <Player />
         </div>
 
       </body>
