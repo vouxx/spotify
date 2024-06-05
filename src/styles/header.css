@@ -1,0 +1,52 @@
+#header{
+  position:relative;
+  padding:16px 32px;
+  height:64px;
+  box-sizing: border-box;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.history_box{
+  display:flex;
+  gap:16px;
+  a{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background-color:rgba(0,0,0,.7);
+  }
+}
+.sign_in{
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:2px;
+  border-radius:23px;
+  box-sizing:border-box;
+  background-color:black;
+}
+.sign_out{
+  position:relative;
+}
+.login_gnb{
+  background-color:red;
+  position:absolute;
+  right:0; 
+  top:100%;
+}
+.toggle_show{
+  display:block;
+}
+.toggle_off{
+  display:none;
+}
