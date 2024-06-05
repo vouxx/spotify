@@ -3,14 +3,14 @@ import { signIn, signOut, useSession  } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import { BiUser } from 'react-icons/bi';
-import { RxTriangleDown, RxTriangleUp } from "react-icons/rx";
+import { RxTriangleDown, RxTriangleUp, RxExternalLink } from "react-icons/rx";
 
 export default function SignIn() {
     const { data: session } = useSession();
     const [menuToggle, setMenuToggle] = useState(false);
-    
+
     const menuHandler = () => {
-      menuToggle == false? setMenuToggle(true):setMenuToggle(false);
+      !menuToggle? setMenuToggle(true):setMenuToggle(false);
     }
 
     if (!session) {
@@ -23,17 +23,25 @@ export default function SignIn() {
     return (
       <div className="sign_out">
         <a className="flex_row" onClick={() => menuHandler()}>
-          <BiUser size='18' color='white'/> {session.user?.name}
-          { menuToggle === false? <RxTriangleDown size='20' color='white'/> : <RxTriangleUp size='20' color='white'/> }
+          <div className="user_icon"> <BiUser size='18' color='white'/> </div>
+          <div className="user_name"> {session.user?.name} </div>
+          <div className="menu_icon">
+            { !menuToggle? <RxTriangleDown size='20' color='white'/> : <RxTriangleUp size='20' color='white'/> }
+          </div>
         </a>
-        <ul className={`login_gnb ${menuToggle ? 'toggle_show' : 'toggle_off'}`}>
-          <li>
-            <Link href="">Profile</Link>
-          </li>
-          <li>
-            <a onClick={() => signOut()}>Sign Out</a>
-          </li>
-        </ul>
+        <div className={`login_gnb ${menuToggle ? 'toggle_show' : 'toggle_off'}`}>
+          <ul>
+            <li>
+              <Link href="">Profile</Link>
+            </li>
+            <li>
+              <Link href="">Setting</Link>
+            </li>
+          </ul>
+          <div>
+            <a onClick={() => signOut()}>Sign Out <span><RxExternalLink size='17'/></span></a>
+          </div>
+        </div>
       </div>
     )
 }
