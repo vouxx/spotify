@@ -5,7 +5,7 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import test1 from '@/static/img/test1.jpg'
 import test2 from '@/static/img/test2.jpg'
 
-export default function AlbumCover() {
+export default function PlayingAlbumCover() {
   const [isCoverToggle, setIsCoverToggle] = useState(false);
 
   const coverHandler = () => {

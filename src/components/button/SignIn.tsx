@@ -10,36 +10,48 @@ export default function SignIn() {
     const [menuToggle, setMenuToggle] = useState(false);
 
     const menuHandler = () => {
-      !menuToggle? setMenuToggle(true):setMenuToggle(false);
+      !menuToggle ? setMenuToggle(true) : setMenuToggle(false);
     }
 
-    if (!session) {
+    if (!session) { 
       return (
-        <div className="sign_in">
+        <div className="sign_in flex flex-wrap justify-center items-center gap-2 p-[2px_6px] rounded-[23px] bg-black text-[13px] leading-[32px]">
           <a onClick={() => signIn("spotify")}>Sign In</a>
         </div>
       );
     }
+
     return (
-      <div className="sign_out">
-        <a className="flex_row" onClick={() => menuHandler()}>
-          <div className="user_icon"> <BiUser size='18' color='white'/> </div>
-          <div className="user_name"> {session.user?.name} </div>
-          <div className="menu_icon">
-            { !menuToggle? <RxTriangleDown size='20' color='white'/> : <RxTriangleUp size='20' color='white'/> }
+      <div className="relative flex flex-wrap justify-center items-center gap-2 p-[2px_6px] rounded-[23px] bg-black text-[13px] leading-[32px]">
+        <a className="sign_in flex flex-row items-center" onClick={() => menuHandler()}>
+          <div className="flex justify-center items-center w-7 h-7 rounded-full bg-[#535353] ml-0.5">
+            <BiUser size='18' color='white'/>
+          </div>
+          <div className="inline-block max-w-[110px] pl-2 overflow-hidden whitespace-nowrap text-ellipsis leading-[32px] text-[14px] text-white">
+            {session.user?.name}
+          </div>
+          <div className="flex justify-center items-center">
+            {!menuToggle ? <RxTriangleDown size='20' color='white'/> : <RxTriangleUp size='20' color='white'/>}
           </div>
         </a>
-        <div className={`login_gnb ${menuToggle ? 'toggle_show' : 'toggle_off'}`}>
-          <ul>
+
+        <div className={`absolute right-0 top-10 w-[196px] p-1 rounded bg-[#282828] shadow-[0_16px_24px_rgba(0,0,0,0.3),0_6px_8px_rgba(0,0,0,0.2)] z-20 ${menuToggle ? 'block' : 'hidden'}`}>
+          <ul className="flex flex-col text-left border-b border-borderBottom border-opacity-10">
             <li>
-              <Link href="">Profile</Link>
+              <Link href="" className="flex justify-between items-center h-10 px-[12px] leading-10 text-[14px] text-white no-underline text-left hover:bg-white hover:bg-opacity-10">
+                Profile
+              </Link>
             </li>
             <li>
-              <Link href="">Setting</Link>
+              <Link href="" className="flex justify-between items-center h-10 px-[12px] leading-10 text-[14px] text-white no-underline text-left hover:bg-white hover:bg-opacity-10">
+                Setting
+              </Link>
             </li>
           </ul>
           <div>
-            <a onClick={() => signOut()}>Sign Out <span><RxExternalLink size='17'/></span></a>
+            <a onClick={() => signOut()} className="flex justify-between items-center h-10 px-[12px] leading-10 text-[14px] text-white no-underline text-left hover:bg-white hover:bg-opacity-10">
+              Sign Out <span><RxExternalLink size='17'/></span>
+            </a>
           </div>
         </div>
       </div>

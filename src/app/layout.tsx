@@ -24,18 +24,20 @@ export default async function RootLayout({
   const session = await getServerSession();
   return (
     <html lang="fr">
-      <body className={inter.className}>
+      <body className="text-white">
         <SessionProvider session={session}>
-          <div className='wrap'>
-              <div className='flex flex-row'>
-                <LeftSide />
-                <div className='section'>
-                  <Header />
-                  {children}
-                </div>
+          <div className='wrap flex flex-wrap w-screen h-screen overflow-hidden'>
+            <div className='flex flex-row w-full'>
+              <LeftSide />
+              <div className='section w-[57.2917%] h-[calc(100vh-90px)] bg-[rgb(83,83,83)] bg-gradient-to-b from-[rgba(0,0,0,.6)] to-[#121212]'>
+                <Header />
+                {children}
+              </div>
+              <div className='right_side w-full max-w-[21.875%] h-[calc(100vh-90px)] bg-black pt-6 box-border flex flex-col flex-wrap space-between content-between'>
                 <RightSide />
               </div>
-              <Player />
+            </div>
+            <Player />
           </div>
         </SessionProvider>
       </body>

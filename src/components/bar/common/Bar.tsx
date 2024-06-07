@@ -1,4 +1,5 @@
 
+'use client'
 interface Iprops {
   id?: string,
   minValue: number,
@@ -9,8 +10,8 @@ interface Iprops {
 
 export default function Bar({id, minValue , maxValue, onMouseUp, defaultValue}:Iprops) {
   return (
-    <div className='playerBarBox' id='playerBarBox'>
-      <input id={id} type="range" min={minValue} max={maxValue} defaultValue={defaultValue} onMouseUp={onMouseUp}/>
+    <div className='player_bar_box' id='playerBarBox'>
+      <input id={id} className="play_bar" type="range" min={minValue} max={maxValue} defaultValue={defaultValue} onMouseUp={onMouseUp}/>
     </div>
   );
 }

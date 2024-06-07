@@ -1,4 +1,4 @@
-export default function PlayTrackInfo() {
+export default function PlayingTrackInfo() {
   return (
     <div className="play_track_info">
       <p>재생 중인 노래 제목</p>
