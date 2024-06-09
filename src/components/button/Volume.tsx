@@ -6,9 +6,9 @@ export default function VolumeButton() {
   return (
     <>
       <Button title='볼륨' onClick={() => {  }}>
-        <BsFillVolumeUpFill size='20' className={'svgIcon'}/>
-        {/* <BsFillVolumeDownFill size='20' className={'svgIcon'}/>
-        <BsFillVolumeOffFill size='20' className={'svgIcon'}/> */}
+        <BsFillVolumeUpFill size='20' className={'svgIcon fill-current text-white opacity-70'}/>
+        {/* <BsFillVolumeDownFill size='20' className={'svgIcon fill-current text-white opacity-70'}/>
+        <BsFillVolumeOffFill size='20' className={'svgIcon fill-current text-white opacity-70'}/> */}
       </Button>
     </>
   );

@@ -7,7 +7,7 @@ export default function Like() {
   const [likes, setLikes] = useState(false)
   return (
     <>
-      <Button><BsPip size='20' className={'svgIcon'}/></Button>
+      <Button><BsPip size='20' className={'svgIcon fill-current text-white opacity-70'}/></Button>
     </>
   )
 }

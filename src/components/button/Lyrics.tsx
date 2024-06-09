@@ -4,7 +4,9 @@ import Button from "@/components/button/common/Button";
 export default function LyricsButton() {
   return (
     <>
-      <Button title='가사'><MdOutlineLyrics size='20' className={'svgIcon'}/></Button>
+      <Button title='가사'>
+        <MdOutlineLyrics size='20' className='mx-auto fill-current text-white'/>
+      </Button>
     </>
   );
 }

@@ -10,7 +10,7 @@ interface Iprops {
 export default function Button({ children, title, onClick, id }:Iprops) {
   return (
     <>
-      <button title={title} onClick={onClick} id={id}>{children}</button>
+      <button className="mx-1.5 transition-all duration-300 ease-in-out opacity-70 hover:opacity-100" title={title} onClick={onClick} id={id}>{children}</button>
     </>
   );
 }

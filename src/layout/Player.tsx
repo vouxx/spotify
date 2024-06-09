@@ -1,5 +1,3 @@
-import '@/styles/player.css';
-
 import PlayingAlbumCover from '@/components/nowPlayingInfoPanel/PlayingAlbumCover';
 import PlayingTrackInfo from '@/components/nowPlayingInfoPanel/PlayingTrackInfo';
 import PlayingTrackButtons from '@/components/nowPlayingInfoPanel/PlayingTrackButtons';
@@ -11,23 +9,20 @@ import PlaybackControl from '@/components/playbackControlPanel/PlaybackControl';
 
 export default function Player() {
   return (
-    <div className='player'>
-      {/* [ ] : 한 번 더 감싸서 component로 묶어 줄 필요가 있는지 고민 (api 연결할 때 체크) */}
-      <div className='player_info'>
-        {/* 앨범 커버 이미지 토글 */}
-        <PlayingAlbumCover />
-        {/* 플레이 중인 노래 정보 */}
-        <PlayingTrackInfo />     
-        {/* 플레이 중인 노래 버튼(좋아요, pip) */}
-        <PlayingTrackButtons />   
+    <div className='relative w-full h-24 bg-background border-t border-lineblack box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
+      <div className='min-w-[230px] max-w-[528px]'>
+        <div className='flex flex-wrap flex-row justify-start'>
+          <PlayingAlbumCover />
+          <PlayingTrackInfo />
+          <PlayingTrackButtons />
+        </div>
       </div>
 
-      <div className='player_bar'>
+      <div className='min-w-[500px] w-full max-w-[704px]'>
         <NowPlayingTrackBar />
         <NowPlayingControl />
       </div>
-
-      <div className='playback_panel'>
+      <div className='min-w-[257px] flex flex-row flex-wrap justify-end items-center'>
         <PlaybackControl />
         <PlaybackVolume />
         <PlaybackScreenControl />

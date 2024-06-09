@@ -4,7 +4,7 @@ import Button from "@/components/button/common/Button";
 export default function DeviceConnectButton() {
   return (
     <>
-      <Button title='다른기기와 연결'><TbDevices size='20' className={'svgStrokeIcon'}/></Button>
+      <Button title='다른기기와 연결'><TbDevices size='20' className="mx-auto fill-current text-white opacity-70"/></Button>
     </>
   );
 }

@@ -26,7 +26,7 @@ export default async function RootLayout({
     <html lang="fr">
       <body className="text-white">
         <SessionProvider session={session}>
-          <div className='wrap flex flex-wrap w-screen h-screen overflow-hidden'>
+          <div className='wrap flex flex-wrap w-screen h-screen overflow-hidden text-white'>
             <div className='flex flex-row w-full'>
               <LeftSide />
               <div className='section w-[57.2917%] h-[calc(100vh-90px)] bg-[rgb(83,83,83)] bg-gradient-to-b from-[rgba(0,0,0,.6)] to-[#121212]'>

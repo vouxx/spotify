@@ -4,7 +4,7 @@ import PlayListButton from "../button/PlayList";
 
 export default function PlaybackControl() {
   return (
-    <div className="flex">
+    <div className="flex justify-center items-center">
       <LyricsButton />
       <PlayListButton />
       <DeviceConnectButton />
