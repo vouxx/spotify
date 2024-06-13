@@ -22,7 +22,7 @@ export default function Player() {
         <NowPlayingTrackBar />
         <NowPlayingControl />
       </div>
-      <div className='min-w-[257px] flex flex-row flex-wrap justify-end items-center'>
+      <div className='min-w-[300px] flex flex-row flex-wrap justify-end items-center'>
         <PlaybackControl />
         <PlaybackVolume />
         <PlaybackScreenControl />

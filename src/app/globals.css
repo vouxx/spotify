@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.top_album_cover{
+/* .top_album_cover{
   width:100%;
   max-width: 20.8333vw;
   position: absolute;
@@ -37,9 +37,9 @@
   &.active{
     left: -400px;
   }
-}
+} */
 
-.left_album_cover{
+/* .left_album_cover{
   width: 56px;
   height: 56px;
   border-radius: 4px;
@@ -87,7 +87,7 @@
       margin-top:7px;
     }
   }
-}
+} */
 
 .input_range{
   width:100%;
