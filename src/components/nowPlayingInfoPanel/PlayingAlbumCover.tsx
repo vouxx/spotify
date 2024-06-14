@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { MdKeyboardArrowDown } from 'react-icons/md';
+import { StaticImageData } from 'next/image';
 import test1 from '@/static/img/test1.jpg'
 import test2 from '@/static/img/test2.jpg'
 
