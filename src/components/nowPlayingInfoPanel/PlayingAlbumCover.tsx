@@ -12,7 +12,7 @@ export default function PlayingAlbumCover() {
     setIsCoverToggle(prevState => !prevState);
   }
 
-  const renderAlbumCover = (isActive: boolean, imageSrc: string, altText: string, coverClass: string) => (
+  const renderAlbumCover = (isActive: boolean, imageSrc: StaticImageData, altText: string, coverClass: string) => (
     <div className={`${coverClass} ${isActive ? (coverClass === 'left_cover_class' ? 'relative left-0' : 'absolute left-0') : 'absolute left-[-400px]'} transition-all duration-300 ease-in-out group`}>
       <a onClick={coverHandler} className="absolute right-0 top-0 w-6 h-6 flex justify-center items-center mr-2 mt-2 rounded-full bg-black bg-opacity-50 cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
         <MdKeyboardArrowDown size='20'/>
@@ -38,8 +38,3 @@ export default function PlayingAlbumCover() {
     </>
   )
 }
-
-// top_album_cover w-full max-w-xs left-[-1rem] bottom-[96px] z-10 absolute left-[-400px] transition-all duration-300 ease-in-out
-// top_album_cover w-full max-w-xs left-[-1rem] bottom-[96px] z-10 relative left-0 transition-all duration-300 ease-in-out
-// left_album_cover w-14 h-14 rounded overflow-hidden left-0 bottom-0 z-10 relative left-0 transition-all duration-300 ease-in-out
-// absolute right-0 top-0 w-6 h-6 flex justify-center items-center mr-2 mt-2 rounded-full bg-black bg-opacity-50 cursor-pointer hover:bg-opacity-100
