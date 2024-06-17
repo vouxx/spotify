@@ -35,7 +35,7 @@ export default function SignIn() {
         </div>
       </a>
 
-      <div className={`absolute right-0 top-10 w-[196px] p-1 rounded bg-[#282828] shadow-[0_16px_24px_rgba(0,0,0,0.3),0_6px_8px_rgba(0,0,0,0.2)] z-20 ${menuToggle ? 'block' : 'hidden'}`}>
+      <div className={`absolute right-0 top-12 w-[196px] p-1 rounded bg-[#282828] shadow-[0_16px_24px_rgba(0,0,0,0.3),0_6px_8px_rgba(0,0,0,0.2)] z-20 ${menuToggle ? 'block' : 'hidden'}`}>
         <ul className="flex flex-col text-left border-b border-borderBottom border-opacity-10">
           <li>
             <Link href="" className="flex justify-between items-center h-10 px-[12px] leading-10 text-[14px] text-white no-underline text-left hover:bg-white hover:bg-opacity-10">

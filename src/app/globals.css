@@ -1,99 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* .top_album_cover{
-  width:100%;
-  max-width: 20.8333vw;
-  position: absolute;
-  left:0;
-  bottom:96px;
-  z-index:1;
-  transition:all .3s ease;
-
-  img{width:100%;}
-
-  a{
-    position: absolute;
-    right:0;
-    top:0;
-    width:30px; height:30px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-right:10px;
-    margin-top:10px;
-    border:none;
-    border-radius: 50%;
-    background-color: black;
-    opacity: 0.5;
-    cursor: pointer;
-    transition:all .3s ease;
-
-    &:hover{
-      opacity: 1;
-    }
-  }
-  &.active{
-    left: -400px;
-  }
-} */
-
-/* .left_album_cover{
-  width: 56px;
-  height: 56px;
-  border-radius: 4px;
-  overflow: hidden;
-  position:relative;
-  left:0;
-  bottom: 0;
-  z-index:1;
-  transition:all .3s ease;
-  cursor: pointer;
-
-  &:hover a{
-    opacity: 1;
-  }
-
-  &.active{
-    position:absolute;
-    left:-400px;
-  }
-
-  img{width:100%;}
-
-  a{
-    position: absolute;
-    right:0;
-    top:0;
-    width:24px; height:24px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-right:5px;
-    transform: rotate(-180deg);
-    margin-top:5px;
-    border:none;
-    border-radius: 50%;
-    background-color: black;
-    opacity: 0;
-    cursor: pointer;
-    transition:all .3s ease;
-
-    &:hover{
-      opacity: 1;
-      width:26px; height:26px;
-      margin-right:7px;
-      margin-top:7px;
-    }
-  }
-} */
+img{width:100%;}
 
 .input_range{
   width:100%;
+  position:relative;
   background-color: transparent;
   margin:-3px 0 0;
-  position: relative;
   z-index: 2;
   display:inline-block;
   vertical-align: middle;

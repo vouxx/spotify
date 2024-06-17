@@ -13,7 +13,7 @@ const config: Config = {
       'orange': '#ffac00',
       'blue': '#1989fa',
       'green': '#1ed760',
-      'background':'#181818',
+      'background':'#151515',
       'lineblack':'#282828',
       'black':'#000000',
       'border': '#282828',

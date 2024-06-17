@@ -9,7 +9,8 @@ import PlaybackControl from '@/components/playbackControlPanel/PlaybackControl';
 
 export default function Player() {
   return (
-    <div className='relative w-full h-24 bg-background border-t border-lineblack box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
+    // <div className='relative w-full h-24 bg-background border-t border-lineblack box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
+    <div className='relative w-full h-24 box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
       <div className='min-w-[230px] max-w-[528px]'>
         <div className='flex flex-wrap flex-row justify-start'>
           <PlayingAlbumCover />
