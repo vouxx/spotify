@@ -27,15 +27,15 @@ export default async function RootLayout({
       <body className="text-white bg-black">
         <SessionProvider session={session}>
           <div className='wrap flex flex-wrap w-screen h-screen overflow-hidden text-white'>
-            <div className='flex flex-row w-full p-2 pb-0'>
+            <div className='flex flex-row w-full p-2 pb-0 h-[calc(100vh-98px)]'>
               <LeftSide />
-              <div className='section w-[57.2917%] h-[calc(100vh-111px)] rounded-lg bg-background bg-gradient-to-b from-[rgba(0,0,0,.6)] to-[#151515]'>
+              <div className='section w-[57.2917%]  rounded-lg bg-background bg-gradient-to-b from-[rgba(0,0,0,.6)] to-[#151515]'>
                 <Header />
                 <div className="p-2">
                   {children}
                 </div>
               </div>
-              <div className='right_side w-full max-w-[21.875%] h-[calc(100vh-111px)] box-border flex flex-col flex-wrap space-between content-between ml-2 rounded-lg bg-background'>
+              <div className='right_side w-full max-w-[21.875%] box-border flex flex-col flex-wrap space-between content-between ml-2 rounded-lg bg-background'>
                 <RightSide />
               </div>
             </div>
