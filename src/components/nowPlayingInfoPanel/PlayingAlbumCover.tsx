@@ -8,18 +8,16 @@ import test2 from '@/static/img/test2.jpg'
 
 export default function PlayingAlbumCover() {
   const [isCoverToggle, setIsCoverToggle] = useState(false); // 초기 상태를 false로 설정하여 left_album_cover가 보이지 않도록 함
-  const [checkPosition, setCheckPosition] = useState('top'); // 초기 상태를 false로 설정하여 left_album_cover가 보이지 않도록 함
+  const [checkPosition, setCheckPosition] = useState('top'); // 초기 상태를 'top'으로 설정하여 left_album_cover가 보이지 않도록 함
 
-  const coverHandler = () => {
+  const toggleCover = () => {
     setIsCoverToggle(prevState => !prevState);
-    checkPosition === 'left'? setCheckPosition('top') : setCheckPosition('left')
-    console.log(checkPosition);
-    
+    setCheckPosition(prevState => prevState === 'left' ? 'top' : 'left');
   }
 
   const renderAlbumCover = (isActive: boolean, imageSrc: StaticImageData, altText: string, coverClass: string) => (
     <div className={`${coverClass} ${isActive ? (checkPosition === 'top' ? 'relative left-0 mr-4' : 'absolute left-0') : 'absolute left-[-450px]'} transition-all duration-300 ease-in-out group`}>
-      <a onClick={coverHandler} className={`absolute right-0 top-0 w-6 h-6 flex justify-center items-center ${checkPosition === 'top' ? 'mr-2' : 'mr-4'} mt-2 rounded-full bg-black bg-opacity-50 cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out`}>
+      <a onClick={toggleCover} className={`absolute right-0 top-0 w-6 h-6 flex justify-center items-center ${checkPosition === 'top' ? 'mr-2' : 'mr-4'} mt-2 rounded-full bg-black bg-opacity-50 cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out`}>
         <MdKeyboardArrowDown size='20'/>
       </a>
       <Image 

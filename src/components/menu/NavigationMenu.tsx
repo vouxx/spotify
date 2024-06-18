@@ -8,7 +8,7 @@ import Logo from "@/static/img/logo.svg";
 
 export default function NavigationMenu() {
   return (
-    <ul className='text-left p-6 w-full rounded-lg bg-background'>
+    <ul className='text-left p-3 w-full rounded-lg bg-background'>
       <li>
         <div className="block w-[130px] mb-6">
           <Link href={'/'}>
