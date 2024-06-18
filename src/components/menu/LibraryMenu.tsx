@@ -9,7 +9,7 @@ import test2 from '@/static/img/test2.jpg'
 export default function LibraryMenu() {
   
   return (
-    <ul className='text-left p-1.5 w-full h-[calc(100%-205px)] rounded-lg bg-background mt-2'>
+    <ul className='text-left p-1.5 w-full h-[calc(100%-181px)] rounded-lg bg-background mt-2'>
       <li className='text-lightgray h-10 text-sm leading-10 p-1.5'>
         <Link href={'/'}>
           <span className="flex flex-row items-center justify-start h-full text-[#b3b3b3] no-underline">
