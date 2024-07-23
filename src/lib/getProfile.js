@@ -6,5 +6,5 @@ export default async function getProfile(token) {
   });
 
   const data = await response.json();
-  console.log(data);
+  return data;
 }

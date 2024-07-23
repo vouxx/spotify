@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
         token.expires_at = account.expires_at;
         token.accessToken = account.access_token;
       }
-      await getProfile(token.accessToken)
+      await getProfile(token.accessToken as string);
       return token;
     },
     async session({ session, token }) {

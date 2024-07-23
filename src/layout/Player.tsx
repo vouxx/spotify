@@ -1,3 +1,4 @@
+'use client'
 import PlayingAlbumCover from '@/components/nowPlayingInfoPanel/PlayingAlbumCover';
 import PlayingTrackInfo from '@/components/nowPlayingInfoPanel/PlayingTrackInfo';
 import PlayingTrackButtons from '@/components/nowPlayingInfoPanel/PlayingTrackButtons';
@@ -6,8 +7,29 @@ import NowPlayingControl from '@/components/nowPlayingTrackPanel/NowPlayingContr
 import PlaybackVolume from '@/components/playbackControlPanel/PlaybackVolume';
 import PlaybackScreenControl from '@/components/playbackControlPanel/PlaybackScreenControl';
 import PlaybackControl from '@/components/playbackControlPanel/PlaybackControl';
+import { useEffect } from 'react';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+declare global {
+  interface Window {
+    onSpotifyWebPlaybackSDKReady: () => void;
+  }
+}
 
 export default function Player() {
+  console.log(authOptions.callbacks?.jwt);
+  
+
+  useEffect(() => {
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      const token = '[My access token]';
+      const player = new (window as any).Spotify.Player({
+        name: '제이 spotify',
+        getOAuthToken: (cb: (token: string) => void) => { cb(token); },
+        volume: 0.5
+      });
+    };
+  }, []);
+
   return (
     // <div className='relative w-full h-24 bg-background border-t border-lineblack box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
     <div className='relative w-full h-24 box-border text-white z-10 flex flex-row flex-nowrap justify-between items-center px-4'>
